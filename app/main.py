@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, jsonify
 import json
 import requests
 from bs4 import BeautifulSoup
@@ -214,4 +214,4 @@ def deScend_search():
         }
     }
 
-    return responseBody
+    return jsonify(responseBody)
