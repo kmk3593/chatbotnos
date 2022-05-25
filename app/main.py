@@ -18,7 +18,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'Hello, World777788888888'
+    return 'Hello, World799999999998'
 
 # 카카오톡 텍스트형 응답
 @app.route('/api/sayHello', methods=['POST'])
@@ -173,12 +173,6 @@ def deScend():
                 k = divmod(j, 2)
                 if k[0] == i :
                     step01_list.append(data_list[j])
-   
-        topactive_list = []
-        for i in range(len(col_list)):
-            topactive_list.append(col_list[i])
-        for i in range(len(step01_list)):
-            topactive_list.append(step01_list[i])
 
     else:
         print(response.status_code)
@@ -190,7 +184,7 @@ def deScend():
             "outputs": [
                 {
                     "simpleText": {
-                        "text": step01_list
+                        "text": "step01_list"
                     }
                 }
             ]
