@@ -81,7 +81,7 @@ def calCulator():
     print(opt_operator, type(opt_operator), number01, type(number01))
 
     answer_text = str(cals(opt_operator, number01, number02))
-
+    
     responseBody = {
         "version": "2.0",
         "template": {
@@ -99,10 +99,12 @@ def calCulator():
 
 
 
+
+
+
 # 카카오톡 하락주 top30
 @app.route('/api/deScend', methods=['POST'])
-def deScend_search():
-
+def deScend():
     # # 거래상위 
     url = "https://finance.naver.com/sise/sise_fall.naver"
     response = requests.get(url)
@@ -201,6 +203,7 @@ def deScend_search():
     else:
         print(response.status_code)
     
+
     responseBody = {
         "version": "2.0",
         "template": {
@@ -214,4 +217,4 @@ def deScend_search():
         }
     }
 
-    return jsonify(responseBody)
+    return responseBody
