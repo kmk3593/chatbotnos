@@ -18,7 +18,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'Hello, World4444'
+    return 'Hello, World4444555555555555'
 
 # 카카오톡 텍스트형 응답
 @app.route('/api/sayHello', methods=['POST'])
@@ -217,4 +217,4 @@ def deScend():
         }
     }
 
-    return responseBody
+    return jsonify(responseBody)
