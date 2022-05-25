@@ -1,5 +1,7 @@
 from flask import Flask, request
 import json
+import requests
+from bs4 import BeautifulSoup
 
 # 메인 로직!! 
 def cals(opt_operator, number01, number02):
