@@ -98,10 +98,11 @@ def showHello():
 #     return responseBody
 
 
-# 카카오톡 Calculator 계산기 응답
+
+# 카카오톡 계산기
 @app.route('/api/calCulator', methods=['POST'])
 def calCulator():
-    body = request.get_json()
+    body = request.get_json() # 사용자가 입력한 데이터
     print(body)
     params_df = body['action']['params']
     print(type(params_df))
@@ -127,6 +128,7 @@ def calCulator():
     }
 
     return responseBody
+
 
 
 
