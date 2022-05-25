@@ -136,47 +136,8 @@ def calCulator():
 # 카카오톡 하락주 top30
 @app.route('/api/deScend', methods=['POST'])
 def deScend():
-    # # 거래상위 
-    url = "https://finance.naver.com/sise/sise_fall.naver"
-    response = requests.get(url)
-    if response.status_code == 200:
-        html = response.text
-        soup = BeautifulSoup(html, 'html.parser')
 
-        title1 = soup.select('th')    
-        col_list = []
-        for i in range(len(title1)):
-            if (title1[i].text == "종목명") or (title1[i].text == "현재가") or (title1[i].text == "등락률"):
-                col_list.append(title1[i].text)
-  
-        title2 = soup.findAll("a", class_="tltle")
-        title_list = []
-        for i in range(len(title2)):
-            title_list.append(title2[i].text)
 
-            if i == 29 : 
-                break
-  
-        title3 = soup.find_all("td", class_="number")
-        data_list = []
-        for i in range(len(title3)):
-            j = divmod(i, 10)
-            if (j[1] == 0) or (j[1] == 2):
-                data_list.append(title3[i].text.strip())
-            if len(data_list) == 60 :
-                break
-    
-        step01_list = []
-        for i in range(len(title_list)):
-            step01_list.append(title_list[i])
-            for j in range(len(data_list)):
-                k = divmod(j, 2)
-                if k[0] == i :
-                    step01_list.append(data_list[j])
-
-    else:
-        print(response.status_code)
-    
 
     responseBody = {
         "version": "2.0",
