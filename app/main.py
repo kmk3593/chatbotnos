@@ -139,23 +139,23 @@ def deScend():
     # # 거래상위 
     url = "https://finance.naver.com/sise/sise_fall.naver"
     response = requests.get(url)
-    # if response.status_code == 200:
-    #     html = response.text
-    #     soup = BeautifulSoup(html, 'html.parser')
+    if response.status_code == 200:
+        html = response.text
+        soup = BeautifulSoup(html, 'html.parser')
 
-    #     title1 = soup.select('th')    
-    #     col_list = []
-    #     for i in range(len(title1)):
-    #         if (title1[i].text == "종목명") or (title1[i].text == "현재가") or (title1[i].text == "등락률"):
-    #             col_list.append(title1[i].text)
+        title1 = soup.select('th')    
+        col_list = []
+        for i in range(len(title1)):
+            if (title1[i].text == "종목명") or (title1[i].text == "현재가") or (title1[i].text == "등락률"):
+                col_list.append(title1[i].text)
   
-    #     title2 = soup.findAll("a", class_="tltle")
-    #     title_list = []
-    #     for i in range(len(title2)):
-    #         title_list.append(title2[i].text)
+        title2 = soup.findAll("a", class_="tltle")
+        title_list = []
+        for i in range(len(title2)):
+            title_list.append(title2[i].text)
 
-    #         if i == 29 : 
-    #             break
+            if i == 29 : 
+                break
   
     #     title3 = soup.find_all("td", class_="number")
     #     data_list = []
