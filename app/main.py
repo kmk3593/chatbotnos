@@ -180,8 +180,8 @@ def deScend():
         for i in range(len(step01_list)):
             topactive_list.append(step01_list[i])
 
-    # else:
-    #     print(response.status_code)
+    else:
+        print(response.status_code)
     
 
     responseBody = {
