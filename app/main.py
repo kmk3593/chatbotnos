@@ -18,7 +18,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'Hello, World777777777777'
+    return 'Hello, World777788888888'
 
 # 카카오톡 텍스트형 응답
 @app.route('/api/sayHello', methods=['POST'])
@@ -190,7 +190,7 @@ def deScend():
             "outputs": [
                 {
                     "simpleText": {
-                        "text": "step01_list"
+                        "text": step01_list
                     }
                 }
             ]
