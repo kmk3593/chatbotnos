@@ -85,7 +85,7 @@ if response.status_code == 200:
             if k[0] == i :
                 step01_list.append(data_list[j])
     # print("step01 ", len(step01_list))
-    print(step01_list)
+    # print(step01_list)
 
 
     # # topactive_list : 최종 리스트
