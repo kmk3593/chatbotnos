@@ -157,22 +157,22 @@ def deScend():
             if i == 29 : 
                 break
   
-    #     title3 = soup.find_all("td", class_="number")
-    #     data_list = []
-    #     for i in range(len(title3)):
-    #         j = divmod(i, 10)
-    #         if (j[1] == 0) or (j[1] == 2):
-    #             data_list.append(title3[i].text.strip())
-    #         if len(data_list) == 60 :
-    #             break
+        title3 = soup.find_all("td", class_="number")
+        data_list = []
+        for i in range(len(title3)):
+            j = divmod(i, 10)
+            if (j[1] == 0) or (j[1] == 2):
+                data_list.append(title3[i].text.strip())
+            if len(data_list) == 60 :
+                break
     
-    #     step01_list = []
-    #     for i in range(len(title_list)):
-    #         step01_list.append(title_list[i])
-    #         for j in range(len(data_list)):
-    #             k = divmod(j, 2)
-    #             if k[0] == i :
-    #                 step01_list.append(data_list[j])
+        step01_list = []
+        for i in range(len(title_list)):
+            step01_list.append(title_list[i])
+            for j in range(len(data_list)):
+                k = divmod(j, 2)
+                if k[0] == i :
+                    step01_list.append(data_list[j])
    
     #     topactive_list = []
     #     for i in range(len(col_list)):
