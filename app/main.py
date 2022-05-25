@@ -247,4 +247,4 @@ def deScend():
         }
     }
 
-    return responseBody
+    return jsonify(responseBody)
