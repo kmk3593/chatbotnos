@@ -268,7 +268,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'Hello, World!'
+    return 'Hello, World222222222222!'
 
 # 카카오톡 텍스트형 응답
 @app.route('/api/sayHello', methods=['POST'])
