@@ -187,6 +187,7 @@ def deScend_search():
                 if k[0] == i :
                     step01_list.append(data_list[j])
         # print("step01 ", len(step01_list))
+        step01_list = str(step01_list)
         print(step01_list)
 
 
@@ -207,7 +208,7 @@ def deScend_search():
             "outputs": [
                 {
                     "simpleText": {
-                        "text": "step01_list"
+                        "text": step01_list
                     }
                 }
             ]
