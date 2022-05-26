@@ -1,7 +1,5 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request
 import json
-import requests
-from bs4 import BeautifulSoup
 
 # 메인 로직!! 
 def cals(opt_operator, number01, number02):
@@ -18,7 +16,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'bye, user!@#$%^'
+    return 'Hello, World!'
 
 # 카카오톡 텍스트형 응답
 @app.route('/api/sayHello', methods=['POST'])
@@ -96,7 +94,6 @@ def calCulator():
     }
 
     return responseBody
-
 
 
 
