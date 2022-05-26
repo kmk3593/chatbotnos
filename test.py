@@ -121,7 +121,6 @@ if response.status_code == 200:
     html = response.text
     soup = BeautifulSoup(html, 'html.parser')
 
-    print("good")
 
     # # col_list : 종목명  현재가 등락률 
     title1 = soup.select('th')    
@@ -129,8 +128,8 @@ if response.status_code == 200:
     for i in range(len(title1)):
         if (title1[i].text == "종목명") or (title1[i].text == "현재가") or (title1[i].text == "등락률"):
             col_list.append(title1[i].text)
-    print("col_list ", len(col_list))
-    print(col_list)
+    # print("col_list ", len(col_list))
+    # print(col_list)
 
     # # title_list : 주식 종목 리스트
     title2 = soup.findAll("a", class_="tltle")
@@ -141,7 +140,7 @@ if response.status_code == 200:
         if i == 9 :
             break
     # print(title_list)
-    print("title_list " , len(title_list))
+    # print("title_list " , len(title_list))
 
     # # data_list : 종목별 데이터
     title3 = soup.find_all("td", class_="number")
@@ -153,7 +152,7 @@ if response.status_code == 200:
         if len(data_list) == 40 :
             break
     # print(data_list)
-    print("data_list ", len(data_list))
+    # print("data_list ", len(data_list))
 
 
     # # title + data
@@ -165,8 +164,8 @@ if response.status_code == 200:
             k = divmod(j, 2)
             if k[0] == i :
                 step01_list[i].append(data_list[j])
-    print("step01 ", len(step01_list))
-    print(step01_list)
+    # print("step01 ", len(step01_list))
+    # print(step01_list)
 
     result = str(pd.DataFrame(step01_list, columns=col_list, index=range(1, 11)))
     print(result)
