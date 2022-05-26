@@ -85,16 +85,17 @@ if response.status_code == 200:
             if k[0] == i :
                 step01_list.append(data_list[j])
     # print("step01 ", len(step01_list))
-    print(step01_list)
+    # print(step01_list)
 
 
-    # # # topactive_list : 최종 리스트
-    # topactive_list = []
-    # for i in range(len(col_list)):
-    #     topactive_list.append(col_list[i])
-    # for i in range(len(step01_list)):
-    #     topactive_list.append(step01_list[i])
-    # # print("topactive_list ", len(topactive_list))
+    # # topactive_list : 최종 리스트
+    topactive_list = []
+    for i in range(len(col_list)):
+        topactive_list.append(col_list[i])
+    for i in range(len(step01_list)):
+        topactive_list.append(step01_list[i])
+    # print("topactive_list ", len(topactive_list))
+    print(topactive_list)
 
 else:
     print(response.status_code)

@@ -222,13 +222,13 @@ def deScend():
         print(step01_list)
 
 
-        # # # topactive_list : 최종 리스트
-        # topactive_list = []
-        # for i in range(len(col_list)):
-        #     topactive_list.append(col_list[i])
-        # for i in range(len(step01_list)):
-        #     topactive_list.append(step01_list[i])
-        # # print("topactive_list ", len(topactive_list))
+        # # topactive_list : 최종 리스트
+        topactive_list = []
+        for i in range(len(col_list)):
+            topactive_list.append(col_list[i])
+        for i in range(len(step01_list)):
+            topactive_list.append(step01_list[i])
+        # print("topactive_list ", len(topactive_list))
 
     else:
         print(response.status_code)
@@ -240,7 +240,7 @@ def deScend():
             "outputs": [
                 {
                     "simpleText": {
-                        "text": step01_list
+                        "text": topactive_list
                     }
                 }
             ]
