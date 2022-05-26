@@ -1,5 +1,5 @@
 git add .
-git commit -m "updated"
+git commit -am "updated"
 git push origin main
 git push heroku main
 
