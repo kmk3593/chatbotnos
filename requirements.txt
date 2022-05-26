@@ -16,4 +16,3 @@ urllib3==1.26.9
 Werkzeug==2.1.2
 zipp==3.8.0
 beautifulsoup4==4.11.1
-jsonify==0.5
