@@ -2,7 +2,6 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 
-
 url = "https://finance.naver.com/sise/sise_fall.naver?sosok=1"
 response = requests.get(url)
 if response.status_code == 200:
