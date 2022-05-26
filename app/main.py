@@ -104,8 +104,6 @@ def calCulator():
 # def deScend_search():
 
 
-    
-
 # # KOSDAQ 하락주 top30
 # @app.route('/api/kosDescend', methods=['POST'])
 # def kosDescend_search():
